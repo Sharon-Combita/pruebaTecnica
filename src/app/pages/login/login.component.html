@@ -1,0 +1,33 @@
+<form class="container pt-5 mt-5 col-5" style="background: rgb(209, 209, 209); border-radius: 10px; padding: 2rem;" [formGroup]="loginForms">
+    <div class="mb-3">
+      <label field="id" class="form-label">id</label>
+      <input type="number"formControlName="id" class="form-control"  >
+    </div>
+
+    <div class="mb-3">
+      <label field="title" class="form-label">title</label>
+      <input type="text" formControlName="title" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label field="body" class="form-label">body</label>
+        <input type="text" formControlName="body" class="form-control">
+      </div>
+
+    <div class="mb-3">
+        <label field="userId" class="form-label">userId</label>
+        <input type="number" formControlName="userId" class="form-control">
+      </div>
+
+    
+
+    <button type="button"  (click)="login()" class="btn btn-primary">guardar</button>
+
+    <button type="button"  (click)="login()" class="btn btn-warning">editar</button>
+    <button type="button"  (click)="login()" class="btn btn-danger">eliminar</button>
+  </form>
+<br><br>
+  <ul>
+    <li *ngFor="let item of data">{{item.postId}} - {{item.id}} - {{item.name}} - {{item.email}} - {{item.body}}</li>
+  
+  </ul>
